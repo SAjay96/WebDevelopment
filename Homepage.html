@@ -1,0 +1,236 @@
+<html >
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <div class="container-fluid">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="deer.jpg" class="d-block w-100" height="300px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="photo.jpg" class="d-block w-100" height="300px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="deer.jpg" class="d-block w-100" height="300px">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- <div class="card"> -->
+                    <div class="card border border-success" (click)="goToProductDetail('product-details')">
+                        <div class="card-header bg-transparent border-success">
+                            <h5 class="my-0 text-success">Tejtel E-SIM</h5>
+                        </div>
+                        <img class="img-fluid" src="assets/images/Tejtel_logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">
+                                is it really! your phone is a smartphone?
+                                make them smart with e-sim
+                            </p>
+                            <a routerLink="/product-details" class="btn btn-success btn-sm">
+                                View More <i class="mdi mdi-arrow-right ms-1"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <div class="col-lg-3">
+                    <!-- <div class="card"> -->
+                    <div class="card border border-success" (click)="goToProductDetail('global')">
+                        <div class="card-header bg-transparent border-success">
+                            <h5 class="my-0 text-success">Tejtel Global Cards</h5>
+                        </div>
+                        <img class="img-fluid" src="assets/images/Tejtel_logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Why spend more on international roaming?
+                                switch to tejtel global plans .
+                            </p>
+
+                            <a routerLink="/global" class="btn btn-success btn-sm">
+                                View More <i class="mdi mdi-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="col-lg-3">
+                    <!-- <div class="card"> -->
+                    <div class="card border border-success" (click)="goToProductDetail('global')">
+                        <div class="card-header bg-transparent border-success">
+                            <h5 class="my-0 text-success">Tejtel Regional Cards</h5>
+                        </div>
+                        <img class="img-fluid" src="assets/images/Tejtel_logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text"> Now no need to carry multiple SIMs for each country you are traveling to.</p>
+                            <a routerLink="/" class="btn btn-success btn-sm">
+                                View More <i class="mdi mdi-arrow-right ms-1"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <div class="col-lg-3">
+                    <!-- <div class="card"> -->
+                    <div class="card border border-success" (click)="goToProductDetail('product-details')">
+                        <div class="card-header bg-transparent border-success">
+                            <h5 class="my-0 text-success">Tejtel Local Cards</h5>
+                        </div>
+                        <img class="img-fluid" src="assets/images/Tejtel_logo.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Whether travelling for business or pleasure, travellers should be able to
+                                connecting local
+
+                            </p>
+                            <a routerLink="/" class="btn btn-success btn-sm">
+                                View More <i class="mdi mdi-arrow-right ms-1"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <!-- <div class="card"> -->
+            <div class="card border border-success" (click)="goToProductDetail('global')">
+                <div class="card-header bg-transparent border-success">
+                    <h5 class="my-0 text-success">Tejtel Regional Cards</h5>
+                </div>
+                <img class="img-fluid" src="assets/images/Tejtel_logo.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text"> Now no need to carry multiple SIMs for each country you are traveling to.</p>
+                    <a routerLink="/" class="btn btn-success btn-sm">
+                        View More <i class="mdi mdi-arrow-right ms-1"></i>
+                    </a>
+
+                </div>
+            </div>
+            <hr>
+            <!-- </div> -->
+        </div>
+        <div class="col-lg-9">
+            <p>
+                W3Schools is a freemium educational website for learning coding online. Developed in 1998, it derives its name from the World Wide Web but is not affiliated with the W3C. W3Schools offers courses covering all aspects of web development. It is ru
+            </p> 
+
+        </div>
+    </div>
+        </div>
+
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row" style="background-color:black">
+                <div class="row" style="color:white">
+
+                    <div class="col-md-4">
+                        <h4></h4>
+                        <img src="assets\images\Tejtel_logo.png" alt height="50">
+                        <p>
+                            Tejtel Technologies Pvt. Ltd. <br>
+                            White Square 304, <br>
+                            Hinjewadi Road, <br>
+                            Wakad Pune-411057
+                        </p>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Get Help</h4>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Order Status</a></li>
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Follow Us On</h4>
+                        <li><a href="www.facebook.com/tejtel"><i class="fab fa-facebook">facebook</i></a></li>
+                        <li><a href="twitter.com/tejtel"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="instagram.com/tejtel"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="linkedin.com/company/tejtel"><i class="fab fa-linkedin"></i></a></li>
+
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <p>Copyright &copy; 2022, Tejtel</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
