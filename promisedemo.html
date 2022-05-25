@@ -1,0 +1,34 @@
+
+<html>
+    <head></head>
+    <body>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <script>
+            function displaysuccess(data){
+                document.getElementById("d1").innerHTML=data;
+            }
+            function displayerror(data){
+                document.getElementById("d2").innerHTML=data;
+            }
+            var promise=new Promise(function(resolve,reject){
+                let r=new XMLHttpRequest();
+                r.open('GET',"https://jsonplaceholder.typicode.com/todos/");
+                r.onload=function(){
+                    if(r.status=200){ // 200 is http status code
+                        resolve(r.response);
+                    }
+                    else{
+                        reject("Not able to load file");
+                    }
+                };
+                r.send();
+            });
+            promise.then(function(value){
+                displaysuccess(value);
+            }).catch(function(error){
+                displayerror(error);
+            });
+        </script>
+    </body>
+</html>

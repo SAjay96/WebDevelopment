@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+
+    <div id="d2"></div>
+
+    <script>
+        var emp = {};
+        emp.Id = 1;
+        emp.Name = "Ajay";
+
+
+        //const employee = {
+        //    firstname: "Ajay",
+        //    lastname: "Sonawane",
+        //    age: 25,
+        //    fullname: function () {
+        //        return this.firstname + "" + this.lastname;
+        //    }
+        //}
+        const product = {
+            id: 1,
+            name: "printer",
+            price: 10000,
+            discountAmount: function () {
+                return this.price * 0.10;
+                return this.id + "  " + this.name + "  " + this.price;
+            },
+            display: function () {
+                return this.id + "  " + this.name + "  " + this.price * 0.10;
+
+            }
+        }
+
+
+
+
+             const student = { 
+                rollno: 29,
+                 name: "Anikt",
+                 chem: 75,
+                 phys: 60,
+                maths:80,
+                
+                 TotalMarks: function () {
+                     return this.rollno  +" " +this.name+" "+ ((this.chem + this.phys + this.maths)/300 *100);
+                  
+                 }
+            
+        }
+
+
+
+        const employee = {
+            age: 30,
+            fullname: function (city, country) {
+                return this.firstname + " " + this.lastname + " " + city + " " + country;
+
+            }
+        }
+        const member = {
+            firstname: "user1",
+            lastname:"user"
+        }
+
+
+
+        const emp1 = {
+            firstname: "Test",
+            lastname: "Test2",
+            age: 25,
+
+            fullname: function () {
+                return this.firstname + " " + this.lastname + " " + city + " " + country;
+
+            }
+        }
+        const member = {
+            firstname:
+        }
+      
+        let empinfo = emp1.fullName.bind(member);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       // document.getElementById("d1").innerHTML = employee.fullname.call(member, "Pune", "India");
+        document.getElementById("d1").innerHTML = employee.fullname.apply(member, ["Mumbai", "India"]);
+       // document.getElementById("d2").innerHTML = student.TotalMarks();
+            
+      // document.getElementById("d1").innerHTML = product.display();
+       // document.getElementById("d1").innerHTML = product.discountAmount();
+       // console.log(employee);
+       // console.log(employee.firstname + employee.lastname);
+        // console.log(product["name"] + product.price);
+       //  document.getElementById("d1").innerHTML = object.values(employee);
+       //document.getElementById("d1").innerHTML = JSON.stringify(product);
+    </script>
+</body>
+</html>

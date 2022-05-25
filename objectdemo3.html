@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+        function display(data) {
+            document.getElementById("d1").innerhtml = data;
+        }
+        var promise = new Promise(function (resolve, reject) {
+            let x = 11;
+            if (x = 10) {
+                resolve("code get executed ")
+            }
+            else {
+                reject("error")
+            }
+        });
+        promise.then(function (value) {
+            display(value);
+        }, function(error) {
+            display(error);
+
+        });
+    </script>
+</body>
+</html>

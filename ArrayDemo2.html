@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Number Array</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+
+        
+        var Numbers = [10, 20, 30, 40, 50];
+
+        //Numbers.push(78);
+        //console.log(Numbers)
+
+        //Numbers.pop();
+        //console.log(Numbers);
+
+        //Numbers.reverse();
+        //console.log(Numbers);
+
+
+        //Numbers.unshift(5)
+        //console.log(Numbers)
+
+
+        //Numbers.shift();
+        //console.log(Numbers);
+
+
+        Numbers.splice(2, 0, 56, 80);
+        console.log(Numbers)
+
+
+        //const colorcopy = Numbers.slice(2);
+        //console.log(colorcopy)
+
+
+        //const colorcopy = Numbers.slice(1, 3);
+        //console.log(colorcopy);
+         
+        //Numbers.sort(function (a, b) { return b - a });
+        //console.log(Numbers);
+
+          Numbers.sort(function (a, b) { return a - b });
+        
+
+        document.getElementById("d1").innerHTML = Numbers;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+
+
+    <div id="d2"></div>
+
+
+
+    <p>Enter color:<input type="text" id="t1"></p>
+    <p><input type="button" value="Add at last" onclick="addlast()"></p>
+    <p><input type="button" value="Add at first" onclick="addfirst()"></p>
+    <p><input type="button" value="Remove last element" onclick="removelast()"></p>
+    <p><input type="button" value="Remove first  element" onclick=" removefirst()"></p>
+    <script>
+
+        // Array in javascript
+
+
+        var colors = ["red", "blue", "green", "black"];
+
+
+
+
+        //colors.splice(3, 0, "white", "pink");
+        //const colorcopy = colors.slice(2);
+        // const colorcopy = colors.slice(1, 3);
+        // colors.sort();
+        // console.log(colors);
+
+        colors.reverse();
+        console.log(colors);
+
+
+        //colors.push("pink");
+        //colors.unshift("white");
+        //colors.pop();
+        //colors.shift();
+
+        var data = "";
+       
+        function Display() {
+            data = "";
+            data= "<ol type='A'>";
+            for (let i = 0; i < colors.length; i++) {
+                data += "<li>" + colors[i] + "</li>";
+            }
+            data += "</ol>";
+            console.log(data);
+            document.getElementById("d1").innerHTML = data;
+        }
+        function addlast() {
+            colors.push(document.getElementById("t1").value);
+            Display();
+        }
+
+        function addfirst() {
+            colors.unshift(document.getElementById("t1").value);
+            Display();
+                
+        }
+        function removefirst() {
+            colors.shift();
+            Display();
+        }
+        function removelast() {
+            colors.pop();
+            Display();
+        }
+        Display();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //var city = ["Pune", "Mumbai", "Nashik", "Nagpur"];
+
+
+        //var data = "<ul type='A'>";
+        //for (let i = 0; i < city.length; i++) {
+        //    data += "<li>" + city[i] + "</li>";
+        //}
+        //data += "</ul>";
+        //console.log(data);
+        //document.getElementById("d2").innerHTML = data;
+
+
+
+
+
+
+    </script>
+</body>
+</html>
