@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="parent">
+        <button type="button">parrent</button>
+        <div id="child">
+            <button type="button">child</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("parent").addEventListener("click", function () {
+            alert("inside parent");
+        }, true);
+
+        document.getElementById("child").addEventListener("click", function () {
+            alert("inside child");
+        }, false);
+    </script>
+</body>
+</html>
